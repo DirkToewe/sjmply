@@ -139,6 +139,8 @@ While adding a property from one list type to another the size type has to be sp
 The output format of a PLY instance is determined by its `format` field. To change it use the
 `setFormat()` method.
 ```Java
+import static org.jengineering.sjmply.PLYFormat.*;
+
 bunny.setFormat(ASCII);
 System.out.println(bunny);
 ```
