@@ -17,18 +17,16 @@ package org.jengineering.sjmply;
  * along with org.jengineering.sjmply. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import static java.lang.System.out;
 import static org.junit.gen5.api.Assertions.assertEquals;
 import static org.junit.gen5.api.Assertions.assertTrue;
 
 import java.io.IOException;
 import java.util.Random;
 
-import org.jengineering.sjmply.Decimal;
 import org.junit.gen5.api.Test;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
-
-import static java.lang.System.out;
 
 @RunWith(JUnitPlatform.class)
 public class Decimal_test

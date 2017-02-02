@@ -25,9 +25,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.jengineering.sjmply.PLY;
-import org.jengineering.sjmply.PLY_Plotly;
-
 /** Manual, i.e. non-automated tests of the {@link PLY} class.
  *  
  *  @author Dirk Toewe
@@ -43,7 +40,7 @@ public class PLY_manual
   {
     Path dir = Paths.get( System.getProperty("user.home"), "Documents", "3d_models" );
 
-    for( String file: asList("dragon") )//"big_porsche", "Armadillo", "blade", "bunny", "dragon", "hand", "happy", "horse", "xyzrgb_dragon") )
+    for( String file: asList("big_porsche") )//"big_porsche", "Armadillo", "blade", "bunny", "dragon", "hand", "happy", "horse", "xyzrgb_dragon") )
     {
       Path tmp = Files.createTempFile("sjmply_test_", ".ply");
       try {

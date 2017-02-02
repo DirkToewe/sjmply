@@ -1,7 +1,7 @@
 package org.jengineering.sjmply;
 /* Copyright 2016 Dirk Toewe
  * 
- * This file is part of org.jengineering.sjmply.
+ * This file was generated using org.jengineering.sjmply.
  *
  * org.jengineering.sjmply is free software: you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published
@@ -134,6 +134,22 @@ public class PLY_Plotly
     return format(
           "<!DOCTYPE html>"
       + "\n<html lang=\"en\">"
+      + "\n  <!--"
+      + "\n    This file was generated using org.jengineering.sjmply."
+      + "\n"
+      + "\n    org.jengineering.sjmply is free software: you can redistribute it and/or"
+      + "\n    modify it under the terms of the GNU General Public License as published"
+      + "\n    by the Free Software Foundation, either version 3 of the License, or"
+      + "\n    (at your option) any later version."
+      + "\n"
+      + "\n    org.jengineering.sjmply is distributed in the hope that it will be useful,"
+      + "\n    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY"
+      + "\n    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License"
+      + "\n    for more details."
+      + "\n"
+      + "\n    You should have received a copy of the GNU General Public License"
+      + "\n    along with org.jengineering.sjmply. If not, see <http://www.gnu.org/licenses/>."
+      + "\n   -->"
       + "\n  <head>"
       + "\n    <meta charset=\"utf-8\">"
       + "\n    <title>%s</title>"
@@ -321,6 +337,22 @@ public class PLY_Plotly
     return format(
           "<!DOCTYPE html>"
       + "\n<html lang=\"en\">"
+      + "\n  <!--"
+      + "\n    This file was generated using org.jengineering.sjmply."
+      + "\n"
+      + "\n    org.jengineering.sjmply is free software: you can redistribute it and/or"
+      + "\n    modify it under the terms of the GNU General Public License as published"
+      + "\n    by the Free Software Foundation, either version 3 of the License, or"
+      + "\n    (at your option) any later version."
+      + "\n"
+      + "\n    org.jengineering.sjmply is distributed in the hope that it will be useful,"
+      + "\n    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY"
+      + "\n    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License"
+      + "\n    for more details."
+      + "\n"
+      + "\n    You should have received a copy of the GNU General Public License"
+      + "\n    along with org.jengineering.sjmply. If not, see <http://www.gnu.org/licenses/>."
+      + "\n   -->"
       + "\n  <head>"
       + "\n    <meta charset=\"utf-8\">"
       + "\n    <title>%s</title>"

@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Objects;
+import java.util.function.BiFunction;
 import java.util.function.IntFunction;
 import java.util.stream.Stream;
 
@@ -350,19 +351,22 @@ public class PLYElementList
         )
       ); 
     }
+    int
+      len = Array.getLength(series),
+      max = 15;
+    Stream<Object> result;
+    @SuppressWarnings("unchecked")
+    BiFunction<Object,Integer,Object>
+      getElem = type instanceof PLYInt<?>
+        ? ( (PLYInt<Object>) type )::get
+        : Array::get;
+    if( len <= max )
+      result = range(0,len).mapToObj( i -> getElem.apply(series,i) );
     else {
-      int
-        len = Array.getLength(series),
-        max = 15;
-      Stream<Object> result;
-      if( len <= max )
-        result = range(0,len).mapToObj( i -> Array.get(series,i) );
-      else {
-        result = Stream.concat( range(0,max/2).mapToObj( i -> Array.get(series,i) ), Stream.of("...") );
-        result = Stream.concat( result, range(len-max/2,len).mapToObj( i -> Array.get(series,i) ) );
-      }
-      return result.map(Objects::toString).collect( joining(", ", " "," ") ); 
+      result = Stream.concat( range(0,max/2).mapToObj( i -> getElem.apply(series,i) ), Stream.of("...") );
+      result = Stream.concat( result, range(len-max/2,len).mapToObj( i -> getElem.apply(series,i) ) );
     }
+    return result.map(Objects::toString).collect( joining(", ", " "," ") );
   }
 
   <T> PropertyIO propertyReader( DataStreamIn  in,  PLYType<T> type, String name ) { return type.propertyReader(in, property(type,name) ); }

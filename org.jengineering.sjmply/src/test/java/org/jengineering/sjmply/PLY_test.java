@@ -29,10 +29,6 @@ import java.util.Arrays;
 import java.util.Map.Entry;
 import java.util.stream.Stream;
 
-import org.jengineering.sjmply.PLY;
-import org.jengineering.sjmply.PLYElementList;
-import org.jengineering.sjmply.PLYType;
-
 public class PLY_test
 {
   public static void main( String... args )
