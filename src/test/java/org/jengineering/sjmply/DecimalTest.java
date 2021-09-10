@@ -17,7 +17,17 @@ package org.jengineering.sjmply;
  * along with org.jengineering.sjmply. If not, see <http://www.gnu.org/licenses/>.
  */
 
-public class Integral_test
-{
+import net.jqwik.api.ForAll;
+import net.jqwik.api.Property;
 
+import java.io.IOException;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+
+public class DecimalTest
+{
+  @Property( tries = 100_000_000 ) void test_read( @ForAll double x ) throws IOException {
+    assertThat( Decimal.read(Double.toString(x)) ).isEqualTo(x);
+  }
 }
