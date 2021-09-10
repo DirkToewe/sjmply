@@ -74,7 +74,7 @@ public class PLY
    MATCH_LINE2     = Pattern.compile("\\s*format\\s+(?<FORMAT>\\S+)\\s+(?<VERSION>\\S+)\\s*"),
    MATCH_COMMENT   = Pattern.compile("\\s*comment\\s(?<COMMENT>.*)"),
    MATCH_ELEMENT   = Pattern.compile("\\s*element\\s+(?<NAME>\\S+)\\s+(?<SIZE>\\d+)\\s*"),
-   MATCH_PROPERTY  = Pattern.compile("\\s*property\\s+(?<TYPE>(list\\s+(u(int(8|16|32)?|char|short))\\s+)*u?(int(8|16|32)?|char|short)|double|float(32|64)?)\\s+(?<NAME>\\S+)\\s*"),
+   MATCH_PROPERTY  = Pattern.compile("\\s*property\\s+(?<TYPE>(list\\s+(u(int(8|16|32)?|char|short))\\s+)*(u?(int(8|16|32)?|char|short)|double|float(32|64)?))\\s+(?<NAME>\\S+)\\s*"),
    MATCH_END       = Pattern.compile("\\s*end_header\\s*"),
    MATCH_OBJ_INFO  = Pattern.compile("\\s*obj_info\\s(?<OBJINFO>.*)");
 
